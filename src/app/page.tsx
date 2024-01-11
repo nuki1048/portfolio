@@ -1,7 +1,9 @@
+import Promo from './components/promo/promo';
+
 export default function Home(): JSX.Element {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      HOME
+    <main className="container mx-auto">
+      <Promo />
     </main>
   );
 }
