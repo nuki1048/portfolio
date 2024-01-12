@@ -8,7 +8,7 @@ const ICON_SIZE_PX = 24;
 
 const Promo: React.FC = () => {
   return (
-    <section className="py-24 flex flex-col-reverse items-center gap-12 md:gap-36 lg:flex-row">
+    <section className="py-16 md:py-24 flex flex-col-reverse items-center gap-12 md:gap-36 lg:flex-row">
       <div className="flex-1 mt-2.5">
         <h1 className="text-4xl font-semibold md:text-6xl md:font-bold text-gray-light-900 dark:text-gray-dark-900">
           Hi, I’m Sagar 👋
@@ -70,9 +70,9 @@ const Promo: React.FC = () => {
           width={280}
           height={320}
           alt="Promo Portrait Photo"
-          className="w-full h-full"
+          className="w-full h-full border-gray-light  border-8 dark:border-gray-dark"
         />
-        <div className="absolute w-72 md:w-full h-full top-5 -left-1/2  md:top-10 md:left-10 -z-10 bg-gray-light-200 border-gray-light dark:bg-gray-dark-200 border-8 dark:border-gray-dark"></div>
+        <span className="absolute w-72 md:w-full h-full top-5 left-1/2 -translate-x-1/2 md:-translate-x-0  md:top-10 md:left-10 -z-10 bg-gray-light-200 border-gray-light dark:bg-gray-dark-200 border-8 dark:border-gray-dark"></span>
       </div>
     </section>
   );

@@ -38,7 +38,7 @@ const Hamburger: React.FC = () => {
         </button>
       )}
       {isMobile && isOpen && (
-        <div className="absolute w-full h-full left-0 flex flex-col items-start top-0 p-4 bg-gray-light-100 dark:bg-gray-dark">
+        <div className="absolute z-20 w-full h-full left-0 flex flex-col items-start top-0 p-4 bg-gray-light-100 dark:bg-gray-dark">
           <div className="w-full flex items-center justify-between pb-4 border-b border-b-gray-light-100 dark:border-b-gray-dark-100">
             <h2 className="text-gray-light-900 dark:text-gray-dark-900 text-3xl font-bold mr-auto">
               {logoText}
