@@ -1,14 +1,11 @@
-import LocationIcon from '../../../../public/assets/icons/location-icon.svg';
-import GitHubIcon from '../../../../public/assets/icons/github-icon.svg';
-import FigmaIcon from '../../../../public/assets/icons/figma-icon.svg';
-import TwitterIcon from '../../../../public/assets/icons/twitter-icon.svg';
 import Image from 'next/image';
+import Section from '../section';
 
 const ICON_SIZE_PX = 24;
 
 const Promo: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 flex flex-col-reverse items-center gap-12 md:gap-36 lg:flex-row">
+    <Section className="flex flex-col-reverse items-center gap-12 md:gap-36 lg:flex-row">
       <div className="flex-1 mt-2.5">
         <h1 className="text-4xl font-semibold md:text-6xl md:font-bold text-gray-light-900 dark:text-gray-dark-900">
           Hi, I’m Sagar 👋
@@ -74,7 +71,7 @@ const Promo: React.FC = () => {
         />
         <span className="absolute w-72 md:w-full h-full top-5 left-1/2 -translate-x-1/2 md:-translate-x-0  md:top-10 md:left-10 -z-10 bg-gray-light-200 border-gray-light dark:bg-gray-dark-200 border-8 dark:border-gray-dark"></span>
       </div>
-    </section>
+    </Section>
   );
 };
 

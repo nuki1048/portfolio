@@ -1,7 +1,7 @@
 'use client';
 
-import Hamburger from '../hamburger/hamburger';
-import ThemeIcon from '../themeIcon/themeIcon';
+import Hamburger from '../hamburger/Hamburger';
+import ThemeIcon from '../themeIcon/ThemeIcon';
 
 const linkClassName = 'text-gray-light-600 dark:text-gray-dark-600';
 

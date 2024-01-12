@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import Tag from '../tag/tag';
+import Tag from '../tag';
+import Section from '../section/Section';
 
 const textStyles = 'text-gray-light-600 dark:text-gray-dark-600';
 const About: React.FC = () => {
   return (
-    <section className="py-16 md:py-24">
+    <Section>
       <Tag className="mx-auto">About Me</Tag>
       <div className="flex flex-col gap-12 items-center md:flex-row md:items-start pt-6 px-0 md:px-7 2xl:px-0 md:pt-12 md:gap-12 xl:gap-48">
         <div className="relative w-72 h-[360px] md:w-[400px] md:h-[480px]">
@@ -66,7 +67,7 @@ const About: React.FC = () => {
           </p>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 export default About;

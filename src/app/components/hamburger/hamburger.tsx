@@ -2,7 +2,7 @@ import useCheckMobileScreen from '@/app/hooks/useCheckMobileScreen';
 
 import CloseIcon from '../../../../public/assets/icons/close-icon.svg';
 import { useState } from 'react';
-import ThemeIcon from '../themeIcon/themeIcon';
+import ThemeIcon from '../themeIcon/ThemeIcon';
 const linkClassName = 'text-gray-600 dark:text-gray-dark-600';
 const logoText = '<SS />';
 
