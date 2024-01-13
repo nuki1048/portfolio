@@ -6,7 +6,7 @@ const Skills: React.FC = () => {
   return (
     <Section className="flex flex-col items-center">
       <Tag className="mx-auto">Skills</Tag>
-      <h3 className="mt-4 mb-6 text-lg md:text-xl text-gray-light-600 dark:text-gray-light-600">
+      <h3 className="mt-4 mb-6 text-lg text-center md:text-xl text-gray-light-600 dark:text-gray-light-600">
         The skills, tools and technologies I am really good at:
       </h3>
       <ul className="w-full grid grid-cols-1 md:grid-cols-5 xl:grid-cols-8		 auto-rows-auto gap-5">

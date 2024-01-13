@@ -13,7 +13,7 @@ const Experience: React.FC = () => {
   return (
     <Section className="flex flex-col justify-center items-center">
       <Tag className="mx-auto">Experience</Tag>
-      <h2 className="mt-4 text-xl  text-gray-light-600 dark:text-gray-dark-500">
+      <h2 className="mt-4 text-lg text-center md:text-xl text-gray-light-600 dark:text-gray-dark-500">
         Here is a quick summary of my most recent experiences:
       </h2>
       <ul className="mt-12 flex flex-col gap-12">

@@ -1,7 +1,11 @@
-import About from './components/about';
-import Experience from './components/experience';
-import Promo from './components/promo';
-import Skills from './components/skills';
+import {
+  About,
+  Experience,
+  Promo,
+  Skills,
+  Testimonials,
+  Work,
+} from './components';
 
 export default function Home(): JSX.Element {
   return (
@@ -10,6 +14,8 @@ export default function Home(): JSX.Element {
       <About />
       <Skills />
       <Experience />
+      <Work />
+      <Testimonials />
     </main>
   );
 }
