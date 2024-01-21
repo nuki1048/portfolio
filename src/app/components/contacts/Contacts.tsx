@@ -1,4 +1,4 @@
-import Image from 'next/image';
+'use client';
 import Section from '../section';
 import Tag from '../tag';
 import ClipboardButton from '../clipboardButton/ClipboardButton';

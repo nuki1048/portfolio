@@ -6,6 +6,7 @@ import Work from './work';
 import Testimonials from './testimonials';
 import Contacts from './contacts';
 import Footer from './footer';
+import Alert from './alert';
 
 export {
   About,
@@ -16,4 +17,5 @@ export {
   Testimonials,
   Contacts,
   Footer,
+  Alert,
 };
