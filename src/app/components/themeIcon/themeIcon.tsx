@@ -11,12 +11,16 @@ const ThemeIcon: React.FC = () => {
       {isModeDark ? (
         <DarkModeIcon
           className={iconClassName}
-          onClick={() => setMode(ThemeModes.LIGHT)}
+          onClick={() => {
+            setMode(ThemeModes.LIGHT);
+          }}
         />
       ) : (
         <LightModeIcon
           className={iconClassName}
-          onClick={() => setMode(ThemeModes.DARK)}
+          onClick={() => {
+            setMode(ThemeModes.DARK);
+          }}
         />
       )}
     </>

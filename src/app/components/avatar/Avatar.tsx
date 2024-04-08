@@ -7,9 +7,9 @@ interface Props {
 const Avatar: React.FC<Props> = ({ imageSrc }) => {
   return (
     <span className="rounded-full w-16 h-16 flex justify-center items-center overflow-hidden bg-[#9CA3AF]">
-      {imageSrc ? (
+      {imageSrc != null && imageSrc.length > 0 ? (
         <Image
-          src={imageSrc ? imageSrc : '/assets/icons/icon-user.svg'}
+          src={imageSrc ?? '/assets/icons/icon-user.svg'}
           width={40}
           height={40}
           alt="Avatar Photo"

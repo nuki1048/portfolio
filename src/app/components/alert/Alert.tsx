@@ -4,7 +4,7 @@ import SuccessIcon from '../../../../public/assets/icons/alert-success-icon.svg'
 import WarningIcon from '../../../../public/assets/icons/alert-warning-icon.svg';
 import ErrorIcon from '../../../../public/assets/icons/alert-error-icon.svg';
 import CloseIcon from '../../../../public/assets/icons/alert-close-icon.svg';
-import { SetStateAction, Dispatch, useEffect, useState } from 'react';
+import { type SetStateAction, type Dispatch, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 export enum AlertStatus {
@@ -58,9 +58,10 @@ const Alert: React.FC<Props> = ({
         setIsOpen(false);
       }, 10000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
-  const renderIcon = () => {
+  const renderIcon = (): React.ReactNode => {
     switch (status) {
       case AlertStatus.Error:
         return <ErrorIcon />;
@@ -93,13 +94,17 @@ const Alert: React.FC<Props> = ({
                     <h3 className="text-xl font-medium">{title}</h3>
                     <span className="text-lg font-normal">{message}</span>
                   </div>
-                  <button onClick={() => setIsOpen(false)}>
+                  <button
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
                     <CloseIcon className={`${alertStyles[status].icon}`} />
                   </button>
                 </div>
               )}
             </>,
-            document.getElementById('alert-portal') as Element
+            document.getElementById('alert-portal') as Element,
           )
         : null}
     </>
