@@ -9,8 +9,8 @@ interface Props {
 const ClipboardButton: React.FC<Props> = ({ textToCopy }) => {
   const [isOpenAlert, setIsOpenAlert] = useState<boolean>(false);
 
-  const handleClick = () => {
-    navigator.clipboard.writeText(textToCopy);
+  const handleClick = (): void => {
+    void navigator.clipboard.writeText(textToCopy);
 
     setIsOpenAlert(true);
   };

@@ -8,10 +8,10 @@ const Promo: React.FC = () => {
     <Section className="flex flex-col-reverse items-center gap-12 md:gap-36 lg:flex-row">
       <div className="flex-1 mt-2.5">
         <h1 className="text-4xl font-semibold md:text-6xl md:font-bold text-gray-light-900 dark:text-gray-dark-900">
-          Hi, I’m Sagar 👋
+          Hi, I&apos;m Sagar 👋
         </h1>
         <p className="mt-8 text-gray-light-600 dark:text-gray-dark-600">
-          I'm a full stack developer (React.js & Node.js) with a focus on
+          I&apos;m a full stack developer (React.js & Node.js) with a focus on
           creating (and occasionally designing) exceptional digital experiences
           that are fast, accessible, visually appealing, and responsive. Even
           though I have been creating web applications for over 7 years, I still
