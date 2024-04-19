@@ -5,9 +5,6 @@ import TestimonialsCard from '../testimonialsCard';
 import { Loader } from '../loader/Loader';
 import { useApiStore } from '@/providers/api-store-provider';
 
-const text =
-  '“Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development.”';
-
 const Testimonials: React.FC = () => {
   const { reviews, loading } = useApiStore((state) => state);
   return (
@@ -18,10 +15,11 @@ const Testimonials: React.FC = () => {
           Nice things people have said about me:
         </h2>
         <ul className="mt-12 flex flex-wrap gap-12">
-          {loading || (!reviews && <Loader />)}
+          {loading || (reviews == null && <Loader />)}
           {!loading &&
             reviews?.map((review) => (
               <TestimonialsCard
+                key={review.id}
                 review={review.review}
                 title="John Doe"
                 company="Founder - xyz.com"

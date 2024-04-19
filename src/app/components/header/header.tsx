@@ -3,7 +3,6 @@
 import { Link } from 'react-scroll';
 import Hamburger from '../hamburger';
 import ThemeIcon from '../themeIcon';
-import { redirect } from 'next/navigation';
 import { DownloadCVButton } from '../downloadCVButton/downloadCVButton';
 
 const linkClassName =

@@ -18,13 +18,14 @@ const Work: React.FC = () => {
           Some of the noteworthy projects I have built:
         </h2>
         <ul className="mt-12 flex flex-col gap-12">
-          {loading || (!repositories && <Loader />)}
+          {loading || (repositories == null && <Loader />)}
           {!loading &&
             repositories?.map((repo, i) => {
               const isOrderReverse = i % 2 === 0;
 
               return (
                 <ProjectCard
+                  key={repo.id}
                   description={repo.description}
                   name={repo.name}
                   topics={repo.topics}

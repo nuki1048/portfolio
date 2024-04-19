@@ -26,21 +26,21 @@ export interface Experience {
   id: string;
 }
 
-export type ApiStoreType = {
+export interface ApiStoreType {
   skills: Skill[] | null;
   reviews: Review[] | null;
   experience: Experience[] | null;
   repositories: any[] | null;
   loading: boolean;
-};
+}
 
-export type ApiActions = {
+export interface ApiActions {
   addSkills: (skills: Skill[]) => void;
-  fetchSkills: () => void;
-  fetchExperience: () => void;
-  fetchRepositories: () => void;
-  fetchReviews: () => void;
-};
+  fetchSkills: () => Promise<void>;
+  fetchExperience: () => Promise<void>;
+  fetchRepositories: () => Promise<void>;
+  fetchReviews: () => Promise<void>;
+}
 
 export type ApiStore = ApiStoreType & ApiActions;
 
@@ -51,20 +51,23 @@ export const defaultInitState: ApiStore = {
   reviews: null,
   loading: false,
   addSkills: (skills: Skill[]) => {},
-  fetchSkills: () => {},
-  fetchExperience: () => {},
-  fetchRepositories: () => {},
-  fetchReviews: () => {},
+  fetchSkills: async () => {},
+  fetchExperience: async () => {},
+  fetchRepositories: async () => {},
+  fetchReviews: async () => {},
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const createApiStore = (initState: ApiStore = defaultInitState) => {
   return createStore<ApiStore>()((set) => ({
     ...initState,
-    addSkills: (skills: Skill[]) => set((state) => ({ ...state, skills })),
+    addSkills: (skills: Skill[]) => {
+      set((state) => ({ ...state, skills }));
+    },
     fetchSkills: async () => {
       set({ loading: true });
       const response = await fetch(
-        'https://portfolio-api-fawn.vercel.app/api/v1/skills'
+        'https://portfolio-api-fawn.vercel.app/api/v1/skills',
       );
       const json = await response.json();
       set({
@@ -75,7 +78,7 @@ export const createApiStore = (initState: ApiStore = defaultInitState) => {
     fetchExperience: async () => {
       set({ loading: true });
       const response = await fetch(
-        'https://portfolio-api-fawn.vercel.app/api/v1/experience'
+        'https://portfolio-api-fawn.vercel.app/api/v1/experience',
       );
       const json = await response.json();
       set({
@@ -86,7 +89,7 @@ export const createApiStore = (initState: ApiStore = defaultInitState) => {
     fetchRepositories: async () => {
       set({ loading: true });
       const response = await fetch(
-        'https://portfolio-api-fawn.vercel.app/api/v1/repo'
+        'https://portfolio-api-fawn.vercel.app/api/v1/repo',
       );
 
       const json = await response.json();
@@ -98,7 +101,7 @@ export const createApiStore = (initState: ApiStore = defaultInitState) => {
     fetchReviews: async () => {
       set({ loading: true });
       const response = await fetch(
-        'https://portfolio-api-fawn.vercel.app/api/v1/reviews'
+        'https://portfolio-api-fawn.vercel.app/api/v1/reviews',
       );
       const json = await response.json();
       set({

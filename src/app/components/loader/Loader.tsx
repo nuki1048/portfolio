@@ -1,7 +1,7 @@
 import { useTheme } from '@/app/hooks/useTheme';
 import { Oval } from 'react-loader-spinner';
 
-export const Loader = () => {
+export const Loader: React.FC = () => {
   const { isModeDark } = useTheme();
   return (
     <Oval

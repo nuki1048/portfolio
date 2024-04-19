@@ -15,8 +15,8 @@ const Contacts: React.FC = () => {
       <Section id="contant" className="flex flex-col items-center">
         <Tag className="mx-auto">Get in touch</Tag>
         <h2 className="mt-4 text-lg text-center md:text-xl text-gray-light-600 dark:text-gray-dark-500">
-          What’s next? Feel free to reach out to me if you're looking for a
-          developer, have a query, or simply want to connect.
+          What&apos;s next? Feel free to reach out to me if you&apos;re looking
+          for a developer, have a query, or simply want to connect.
         </h2>
         <ul className="w-full mt-6 md:mt-12 flex flex-col gap-4">
           <li className="w-full flex justify-center items-center gap-4 md:gap-5">

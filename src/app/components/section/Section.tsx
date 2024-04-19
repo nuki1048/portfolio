@@ -22,7 +22,7 @@ const Section: React.FC<Props> = ({ children, className }) => {
     }),
     {
       rootMargin: '-40% 0%',
-    }
+    },
   );
 
   return (

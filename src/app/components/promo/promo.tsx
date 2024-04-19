@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Section from '../section';
-import { animated, useSpring } from '@react-spring/web';
+import { animated } from '@react-spring/web';
 const ICON_SIZE_PX = 24;
 
 const Promo: React.FC = () => {
@@ -8,20 +8,20 @@ const Promo: React.FC = () => {
   const startDate = new Date('2022-09-01');
   const diffInMilliseconds = date.getTime() - startDate.getTime();
   const diffInYears = Math.round(
-    diffInMilliseconds / (1000 * 60 * 60 * 24 * 365)
+    diffInMilliseconds / (1000 * 60 * 60 * 24 * 365),
   ).toFixed(1);
 
   return (
     <Section className="flex flex-col-reverse items-center gap-12 md:gap-36 lg:flex-row">
       <div className="flex-1 mt-2.5">
-        
         <animated.h1 className="text-4xl font-semibold md:text-6xl md:font-bold text-gray-light-900 dark:text-gray-dark-900">
           Hi, I&apos;m Nikita👋
         </animated.h1>
         <p className="mt-8 text-gray-light-600 dark:text-gray-dark-600">
           I&apos;m a front end developer (React.js & TypeScript) with a focus in
-          on creating a client side applications. I've been in this field for{' '}
-          {diffInYears} years now and still opening for my self something new.
+          on creating a client side applications. I&apos;ve been in this field
+          for {diffInYears} years now and still opening for my self something
+          new.
         </p>
         <div className="mt-12 flex items-center gap-2">
           <Image

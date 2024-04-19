@@ -1,45 +1,12 @@
 'use client';
-import { useEffect } from 'react';
 import { useApiStore } from '@/providers/api-store-provider';
 import ExperienceCard from '../experienceCard';
 import Section from '../section';
 import Tag from '../tag';
-import { useTheme } from '@/app/hooks/useTheme';
-import ContentLoader from 'react-content-loader';
-import { Oval } from 'react-loader-spinner';
 import { Loader } from '../loader/Loader';
-
-const skills = [
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  'Ut pretium arcu et massa semper, id fringilla leo semper.',
-  'Sed quis justo ac magna.',
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-];
-
-const Skeleton = () => {
-  const { isModeDark } = useTheme();
-  return (
-    <ContentLoader
-      speed={2}
-      width="100%"
-      height="300px"
-      backgroundColor={isModeDark ? '#0B1736' : '#f3f3f3'}
-      foregroundColor={isModeDark ? '#1c3166' : '#ecebeb'}
-    >
-      <rect x="30" y="30" rx="0" ry="0" width="258" height="32" />
-      <rect x="30" y="71" rx="0" ry="0" width="465" height="32" />
-      <rect x="30" y="116" rx="0" ry="0" width="749" height="32" />
-
-      <rect x="30" y="180" rx="0" ry="0" width="258" height="32" />
-      <rect x="30" y="220" rx="0" ry="0" width="465" height="32" />
-      <rect x="30" y="270" rx="0" ry="0" width="749" height="32" />
-    </ContentLoader>
-  );
-};
 
 const Experience: React.FC = () => {
   const { experience, loading } = useApiStore((state) => state);
-  const { isModeDark } = useTheme();
 
   return (
     <Section className="flex flex-col justify-center items-center">

@@ -25,7 +25,7 @@ const About: React.FC = () => {
               Curious about me? Here you have it:
             </h3>
             <p className={textStyles}>
-              I'm a passionate,{' '}
+              I&apos;m a passionate,{' '}
               <a href="#" className="underline">
                 front-end developer
               </a>{' '}
@@ -37,10 +37,10 @@ const About: React.FC = () => {
             </p>
             <p className={textStyles}>
               I began my journey as a web developer in 2022, and since then,
-              I've continued to grow and evolve as a developer, taking on new
-              challenges and learning the latest technologies along the way.
+              I&apos;ve continued to grow and evolve as a developer, taking on
+              new challenges and learning the latest technologies along the way.
               Now, in my early thirties, 2 years after starting my web
-              development journey, I'm building cutting-edge web applications
+              development journey, Im building cutting-edge web applications
               using modern technologies such as Next.js, TypeScript, Express.js,
               TailwindCSS, MongoDB and much more.
             </p>
