@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './components/header';
 import AlertContainer from './components/alertContainer/AlertContainer';
+import { ApiStoreProvider } from '@/providers/api-store-provider';
 
 const inter = Inter({ subsets: ['latin'], weight: ['700', '600', '400'] });
 
@@ -22,10 +23,12 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-gray-light dark:bg-gray-dark relative`}
       >
-        <AlertContainer>
-          <Header />
-          {children}
-        </AlertContainer>
+        <ApiStoreProvider>
+          <AlertContainer>
+            <Header />
+            {children}
+          </AlertContainer>
+        </ApiStoreProvider>
       </body>
     </html>
   );

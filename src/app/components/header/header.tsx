@@ -1,9 +1,13 @@
 'use client';
 
-import Hamburger from '../hamburger/Hamburger';
-import ThemeIcon from '../themeIcon/ThemeIcon';
+import { Link } from 'react-scroll';
+import Hamburger from '../hamburger';
+import ThemeIcon from '../themeIcon';
+import { redirect } from 'next/navigation';
+import { DownloadCVButton } from '../downloadCVButton/downloadCVButton';
 
-const linkClassName = 'text-gray-light-600 dark:text-gray-dark-600';
+const linkClassName =
+  'cursor-pointer	text-gray-light-600 dark:text-gray-dark-600';
 
 const Header: React.FC = () => {
   const logoText = '<SS />';
@@ -16,16 +20,24 @@ const Header: React.FC = () => {
       <div className="hidden md:flex items-center justify-center">
         <ul className="items-center gap-6 md:flex">
           <li className={linkClassName}>
-            <a href="#">About</a>
+            <Link smooth to="about">
+              About
+            </Link>
           </li>
           <li className={linkClassName}>
-            <a href="#">Work</a>
+            <Link smooth to="work">
+              Work
+            </Link>
           </li>
           <li className={linkClassName}>
-            <a href="#">Testimonials</a>
+            <Link smooth to="testimonials">
+              Testimonials
+            </Link>
           </li>
           <li className={linkClassName}>
-            <a href="#">Contact</a>
+            <Link to="contant" smooth>
+              Contact
+            </Link>
           </li>
         </ul>
         <span className="w-0.5 h-6 text-gray-light-100 dark:text-gray-dark-100 mx-6">
@@ -34,9 +46,7 @@ const Header: React.FC = () => {
         <button>
           <ThemeIcon />
         </button>
-        <button className="bg-gray-900 text-gray-light-50 dark:bg-gray-dark-900 dark:text-gray-dark-50 rounded-xl py-1.5 px-4 hover:bg-gray-light-950 dark:hover:bg-gray-dark-950 transition-colors duration-300	">
-          Download CV
-        </button>
+        <DownloadCVButton />
       </div>
       <Hamburger />
     </header>
