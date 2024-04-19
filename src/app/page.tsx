@@ -16,10 +16,23 @@ export default function Home(): JSX.Element {
   const { fetchRepositories, fetchExperience, fetchSkills, fetchReviews } =
     useApiStore((state) => state);
   useEffect(() => {
-    fetchRepositories();
-    fetchExperience();
-    fetchSkills();
-    fetchReviews();
+    try {
+      fetchRepositories().catch((errr) => {
+        console.log(errr);
+      });
+      fetchExperience().catch((errr) => {
+        console.log(errr);
+      });
+      fetchSkills().catch((errr) => {
+        console.log(errr);
+      });
+      fetchReviews().catch((errr) => {
+        console.log(errr);
+      });
+    } catch (error) {
+      console.log('error');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
