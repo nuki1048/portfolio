@@ -2,7 +2,8 @@ import useCheckMobileScreen from '@/app/hooks/useCheckMobileScreen';
 
 import CloseIcon from '../../../../public/assets/icons/close-icon.svg';
 import { useState } from 'react';
-import ThemeIcon from '../themeIcon/ThemeIcon';
+import ThemeIcon from '../themeIcon';
+import { DownloadCVButton } from '../downloadCVButton/downloadCVButton';
 const linkClassName = 'text-gray-600 dark:text-gray-dark-600';
 const logoText = '<SS />';
 
@@ -65,9 +66,7 @@ const Hamburger: React.FC = () => {
             Switch theme
             <ThemeIcon />
           </button>
-          <button className="mt-4 w-full bg-gray-light-900 dark:bg-gray-dark-900 text-gray-light-50 dark:text-gray-dark-50 rounded-xl py-1.5 px-4 hover:bg-gray-light-950 dark:hover:bg-gray-dark-950 transition-colors duration-300	">
-            Download CV
-          </button>
+          <DownloadCVButton />
         </div>
       )}
     </>
