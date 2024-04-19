@@ -1,3 +1,3 @@
-import ThemeIcon from './ThemeIcon';
+import ThemeIcon from './themeIcon';
 
 export default ThemeIcon;

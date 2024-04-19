@@ -15,7 +15,7 @@ interface Props {
   name: string;
   description: string;
   topics: string[];
-  homepage: string;
+  homepage?: string;
   url: string;
 }
 
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<Props> = ({
         x: 0,
       },
     }),
-    { once: true }
+    { once: true },
   );
 
   const [fromRightRef, fromRightSpring] = useInView(
@@ -55,7 +55,7 @@ const ProjectCard: React.FC<Props> = ({
         x: 0,
       },
     }),
-    { once: true }
+    { once: true },
   );
 
   return (
@@ -65,15 +65,19 @@ const ProjectCard: React.FC<Props> = ({
       className={`w-full h-fit flex flex-col ${rowOrderStyles} rounded-xl shadow-md bg-gray-light dark:bg-gray-dark-100`}
     >
       <div className="flex-1	p-12 border-gray-light-100 dark:border-gray-dark-100 bg-gray-light-50 dark:bg-gray-dark-50">
-        {homepage ? (
+        {homepage != null ? (
           <Iframe
             url={homepage}
             className="object-cover w-72 h-48 md:w-[480px] md:h-[380px] rounded-xl shadow-lg"
             display="block"
             position="relative"
             scrolling={showScroll ? 'yes' : 'no'}
-            onMouseOut={() => setShowScroll(false)}
-            onMouseOver={() => setShowScroll(true)}
+            onMouseOut={() => {
+              setShowScroll(false);
+            }}
+            onMouseOver={() => {
+              setShowScroll(true);
+            }}
             styles={{ borderRadius: '24px', background: '#fff' }}
           />
         ) : (
